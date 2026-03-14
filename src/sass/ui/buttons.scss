@@ -1,0 +1,38 @@
+@use "/src/sass/base/mixins.scss" as *;
+@use "/src/sass/base/variables.scss" as *;
+
+.btn-default {
+    @include btn;
+    // box
+    width: 230px;
+    height: 50px;
+    //text
+    font-size: 20px;
+    transition: 0.5s;
+}
+
+@media screen and (min-width:1200px) {
+    .btn-default {
+        &:hover {
+            color: $light;
+            background-color: $dark;
+            transition: ease-in-out 0.3s;
+        }
+
+        &:active {
+            box-shadow: inset 0 0 10px 1px rgba(0, 0, 0, 0.4);
+            background: rgba(217, 217, 217, 0.1);
+            color: $dark;
+            transition: 0s;
+            border: none;
+        }
+    }
+}
+
+@media screen and (min-width:1920px) {
+    .btn-default {
+        //box
+        width: 330px;
+        height: 60px;
+    }
+}
