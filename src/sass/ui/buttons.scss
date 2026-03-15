@@ -11,6 +11,24 @@
     transition: 0.5s;
 }
 
+.btn-send {
+    @include btn;
+    width: 220px;
+    height: 40px;
+    font-size: 16px;
+
+    &:focus {
+        border: 1px solid $ceramic;
+        outline: 1px solid $ceramic;
+        transition: ease-in-out 0.3s;
+    }
+
+    &:disabled {
+        color: $ui-disabled;
+        border: 1px solid $ui-disabled;
+    }
+}
+
 @media screen and (min-width:1200px) {
     .btn-default {
         &:hover {
@@ -28,6 +46,20 @@
         }
     }
 }
+
+.btn-send {
+    &:active {
+        border: 1px solid $ceramic;
+        outline: 1px solid $ceramic;
+        transition: ease-in-out 0.3s;
+    }
+
+    &:hover {
+        color: $ceramic;
+        border: 1px solid $ceramic;
+    }
+}
+
 
 @media screen and (min-width:1920px) {
     .btn-default {
